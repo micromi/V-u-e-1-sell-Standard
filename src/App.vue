@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <v-header></v-header>
+    <v-header :seller="seller"></v-header>
     <div class="tab border-1px">
       <div class="tab-item">
         <a v-link="{path:'/goods'}">商品</a>
@@ -18,7 +18,28 @@
 
 <script>
 import header from 'components/header/header';
+
+const ERR_OK = 0;
 export default {
+  data() {
+    return {
+      seller: {}
+    };
+  },
+  created() {
+    this.$http.get('/api/seller').then(
+    (res) => {
+      console.log(res);
+      res = res.body; // 请求响应的数据
+      if (res.errno === ERR_OK) {
+        this.seller = res.data;
+      }
+      console.log(this.seller);
+    },
+    (err) => {
+      console.log(err);
+    });
+  },
   components: {
     'v-header': header
   }
