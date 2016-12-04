@@ -1,6 +1,6 @@
 <template>
-  <div class="header">
-    我是hader
+  <div>
+    我是goods
   </div>
 </template>
 
@@ -9,5 +9,6 @@
 </script>
 
 <style lang="stylus" rel="stylessheet/stylus">
-
+h1 
+  color: red
 </style>

@@ -17,6 +17,10 @@ module.exports = {
     // allow async-await
     'generator-star-spacing': 0,
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
+    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+    /****** 自定义验证规则 start ******/
+    'semi': ['error', 'always'], // 定义语句以分号结尾
+    'index': 0 // 缩进
+    /****** 自定义验证规则 end ******/
   }
 }
