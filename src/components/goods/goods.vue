@@ -9,6 +9,5 @@
 </script>
 
 <style lang="stylus" rel="stylessheet/stylus">
-h1 
-  color: red
+
 </style>
